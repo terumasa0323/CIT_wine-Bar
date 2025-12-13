@@ -1,0 +1,46 @@
+<!-- CIT Logo as SVG -->
+<!-- このファイルはHTMLから参照できるように、images/logo.svg として保存 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="300" height="150">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c1810;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a2c1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd89b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4a574;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="300" height="150" fill="url(#bgGradient)" rx="10"/>
+  
+  <!-- 装飾的なワイングラスアイコン -->
+  <g transform="translate(30, 35)">
+    <!-- ワイングラスの脚 -->
+    <line x1="20" y1="30" x2="20" y2="50" stroke="#d4a574" stroke-width="2"/>
+    <!-- ワイングラスのベース -->
+    <circle cx="20" cy="55" r="8" fill="none" stroke="#d4a574" stroke-width="2"/>
+    <!-- ワイングラスのボウル -->
+    <path d="M 10 30 Q 8 20 10 10 Q 12 5 20 5 Q 28 5 30 10 Q 32 20 30 30 Z" fill="none" stroke="#d4a574" stroke-width="2"/>
+    <!-- ワインの液体 -->
+    <path d="M 12 28 Q 10 22 12 15 Q 14 10 20 10 Q 26 10 28 15 Q 30 22 28 28 Z" fill="#8b4513" opacity="0.6"/>
+  </g>
+  
+  <!-- メインテキスト "CIT" -->
+  <text x="150" y="90" font-family="Georgia, serif" font-size="72" font-weight="bold" 
+        fill="url(#textGradient)" text-anchor="middle" letter-spacing="8">CIT</text>
+  
+  <!-- サブテキスト "Wine Bar" -->
+  <text x="150" y="115" font-family="Georgia, serif" font-size="18" font-style="italic"
+        fill="#d4a574" text-anchor="middle" letter-spacing="2">Wine Bar</text>
+  
+  <!-- 下部のデコレーティブライン -->
+  <line x1="80" y1="125" x2="220" y2="125" stroke="#d4a574" stroke-width="1" opacity="0.5"/>
+  
+  <!-- コーナーのアクセント -->
+  <circle cx="20" cy="20" r="3" fill="#d4a574" opacity="0.7"/>
+  <circle cx="280" cy="20" r="3" fill="#d4a574" opacity="0.7"/>
+  <circle cx="20" cy="130" r="3" fill="#d4a574" opacity="0.7"/>
+  <circle cx="280" cy="130" r="3" fill="#d4a574" opacity="0.7"/>
+</svg>

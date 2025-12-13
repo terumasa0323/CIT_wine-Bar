@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfb03293.css",
-    "main.js": "/static/js/main.ee737c8b.js",
-    "static/js/453.0624e709.chunk.js": "/static/js/453.0624e709.chunk.js",
-    "index.html": "/index.html",
-    "main.dfb03293.css.map": "/static/css/main.dfb03293.css.map",
-    "main.ee737c8b.js.map": "/static/js/main.ee737c8b.js.map",
-    "453.0624e709.chunk.js.map": "/static/js/453.0624e709.chunk.js.map"
+    "main.css": "/CIT_wine-Bar/static/css/main.dfb03293.css",
+    "main.js": "/CIT_wine-Bar/static/js/main.f3b8eb09.js",
+    "static/js/453.0624e709.chunk.js": "/CIT_wine-Bar/static/js/453.0624e709.chunk.js",
+    "index.html": "/CIT_wine-Bar/index.html",
+    "main.dfb03293.css.map": "/CIT_wine-Bar/static/css/main.dfb03293.css.map",
+    "main.f3b8eb09.js.map": "/CIT_wine-Bar/static/js/main.f3b8eb09.js.map",
+    "453.0624e709.chunk.js.map": "/CIT_wine-Bar/static/js/453.0624e709.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfb03293.css",
-    "static/js/main.ee737c8b.js"
+    "static/js/main.f3b8eb09.js"
   ]
 }

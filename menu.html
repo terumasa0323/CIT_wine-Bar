@@ -5,10 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CIT メニュー - コース料理からアラカルトメニュー、厳選ワインまで">
     <title>メニュー - CIT イタリアン Wine Bar</title>
+    
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ▼▼▼ 追加した演出用のスタイル ▼▼▼ */
+        
+        /* 画像の高さを揃える */
+        .wine-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* 再生ボタンのデザイン（Bootstrapを使わずに再現） */
+        .play-btn {
+            display: inline-block;
+            background-color: #dc3545; /* 赤色 */
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px; /* 丸み */
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影 */
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+
+        .play-btn:hover {
+            background-color: #bb2d3b; /* ホバー時は少し濃く */
+        }
+        
+        .play-btn-area {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- ヘッダー -->
     <header class="header">
         <div class="header-content">
             <div class="logo">
@@ -18,7 +53,6 @@
         </div>
     </header>
 
-    <!-- ナビゲーション -->
     <nav class="navbar">
         <ul class="nav-menu">
             <li><a href="index.html">ホーム</a></li>
@@ -28,7 +62,6 @@
         </ul>
     </nav>
 
-    <!-- メインコンテンツ -->
     <main class="main-content">
         <section class="hero">
             <div class="hero-content">
@@ -37,7 +70,6 @@
             </div>
         </section>
 
-        <!-- コースメニュー -->
         <section class="menu-section">
             <div class="container">
                 <h2>コースメニュー</h2>
@@ -95,7 +127,6 @@
             </div>
         </section>
 
-        <!-- グラスワイン -->
         <section class="wine-section">
             <div class="container">
                 <h2>グラスワイン</h2>
@@ -133,11 +164,26 @@
                         <p class="wine-price">650円～</p>
                         <p>優雅でバランスの取れたロゼワイン。どんな料理にも合わせやすい。</p>
                     </article>
-                </div>
+                    
+                    <article class="wine-card">
+                        <div class="wine-image">
+                            <img src="2025素材/wine.gif" alt="ワイン演出">
+                        </div>
+                        <h3>ワインイメージ</h3>
+                        <p>当店のワインは、香りだけでなく「音」でも楽しめます。<br>心地よい音色をお聴きください。</p>
+                        
+                        <div class="play-btn-area">
+                            <button onclick="playWineSound()" class="play-btn">
+                                <span>♪</span> 注ぐ音を聴く
+                            </button>
+                        </div>
+                        
+                        <audio id="wineAudio" src="2025素材/wine.mp3"></audio>
+                    </article>
+                    </div>
             </div>
         </section>
 
-        <!-- チーズメニュー -->
         <section class="cheese-section">
             <div class="container">
                 <h2>チーズメニュー - 絶品!</h2>
@@ -153,7 +199,7 @@
                     </article>
                     <article class="cheese-card">
                         <div class="cheese-image">
-                            <img src="2025素材/モッツァレラチーズトマト.jpg.png" alt="モッツァレラとトマト">
+                            <img src="2025素材/モッツァレラチーズトマト.jpg" alt="モッツァレラとトマト">
                         </div>
                         <h3>モッツァレラとトマト</h3>
                         <p class="price">1,200円</p>
@@ -171,7 +217,6 @@
             </div>
         </section>
 
-        <!-- CTA -->
         <section class="cta">
             <div class="container">
                 <h2>ご予約・お問い合わせ</h2>
@@ -182,7 +227,6 @@
         </section>
     </main>
 
-    <!-- フッター -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-info">
@@ -210,7 +254,18 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
+
+    <script>
+        function playWineSound() {
+            var audio = document.getElementById("wineAudio");
+            audio.volume = 1.0; 
+            audio.currentTime = 0;
+            audio.play().catch(function(error) {
+                console.log("再生エラー:", error);
+                alert("再生できません。ファイル名が wine.mp3 になっているか確認してください。");
+            });
+        }
+    </script>
 </body>
 </html>
